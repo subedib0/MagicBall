@@ -15,11 +15,7 @@ public class Main {
         int x = 1 + r.nextInt(20);
         while (questionM) {
 
-//
-//            System.out.println("Enter a Number Here:");
-//            number = scan.nextInt();
-
-//            System.out.print("value of x:"+x );
+//in order to get the random answer in the loop Random class has to be inside the loop
 
             r = new Random();
              x = 1 + r.nextInt(20);
@@ -78,6 +74,7 @@ public class Main {
             scan = new Scanner(System.in);
 
             System.out.println("Do you have another Question to magic ball? (y/n)");
+            //user able to type the y or n from the scan.nextLine
             String question = scan.nextLine();
 
             if (question.equals("y")) {
@@ -92,6 +89,7 @@ public class Main {
             if (question.equals("y")) {
                 questionM = true;
                 System.out.println("what do you want to know?");
+                //user will be able to type the question that they want to know from Magic ball
                 String answer= scan.nextLine();
 
 
