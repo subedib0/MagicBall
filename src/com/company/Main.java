@@ -10,15 +10,19 @@ public class Main {
         System.out.println("will I win the lottery tomorrow ");
         int number = 0;
 
-        boolean questionM = false;
+        boolean questionM = true;
         Random r = new Random();
         int x = 1 + r.nextInt(20);
-        while (true) {
+        while (questionM) {
 
-            number = scan.nextInt();
+//
+//            System.out.println("Enter a Number Here:");
+//            number = scan.nextInt();
 
-            System.out.print("value of x:" );
-            x++;
+//            System.out.print("value of x:"+x );
+
+            r = new Random();
+             x = 1 + r.nextInt(20);
 
             System.out.println();
 
@@ -80,6 +84,21 @@ public class Main {
                 questionM = true;
 
 
+            } else {
+                questionM = false;
+                System.out.println("no");
+            }
+
+            if (question.equals("y")) {
+                questionM = true;
+                System.out.println("what do you want to know?");
+                String answer= scan.nextLine();
+
+
+            } else {
+                questionM = false;
+
+                System.out.println("Great You do not need Magic ball's answer");
             }
         }
     }
